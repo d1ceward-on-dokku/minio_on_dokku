@@ -1,7 +1,7 @@
 FROM golang:1.23-alpine AS build
 
 ARG TARGETARCH="amd64"
-ARG MINIO_VERSION="RELEASE.2025-03-12T18-04-18Z"
+ARG MINIO_VERSION="RELEASE.2025-04-03T14-56-28Z"
 
 ENV GOPATH=/go
 ENV CGO_ENABLED=0
@@ -40,7 +40,7 @@ RUN chmod +x /download-static-curl.sh && /download-static-curl.sh
 
 FROM registry.access.redhat.com/ubi9/ubi-micro:latest
 
-ARG MINIO_VERSION="RELEASE.2025-03-12T18-04-18Z"
+ARG MINIO_VERSION="RELEASE.2025-04-03T14-56-28Z"
 
 LABEL name="MinIO" \
       vendor="MinIO Inc <dev@min.io>" \
