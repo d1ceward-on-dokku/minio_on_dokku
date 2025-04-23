@@ -1,4 +1,4 @@
-FROM golang:1.23-alpine AS build
+FROM golang:1.24-alpine AS build
 
 ARG TARGETARCH="amd64"
 ARG MINIO_VERSION="RELEASE.2025-04-08T15-41-24Z"
@@ -27,7 +27,7 @@ RUN curl -s -q https://dl.min.io/client/mc/release/linux-${TARGETARCH}/mc -o /go
     chmod +x /go/bin/mc
 
 RUN curl -s -q https://raw.githubusercontent.com/minio/minio/${MINIO_VERSION}/dockerscripts/docker-entrypoint.sh -o /docker-entrypoint.sh
-RUN curl -s -q https://raw.githubusercontent.com/minio/minio/${MINIO_VERSION}/dockerscripts/download-static-curl.sh -o /download-static-curl.sh
+RUN curl -s -q https://raw.githubusercontent.com/minio/minio/${MINIO_VERSION}/dockerscripts/download-static-curl.sh -o /build/download-static-curl
 
 RUN curl -s -q https://raw.githubusercontent.com/minio/minio/${MINIO_VERSION}/CREDITS -o /CREDITS && \
     curl -s -q https://raw.githubusercontent.com/minio/minio/${MINIO_VERSION}/LICENSE -o /LICENSE
@@ -36,7 +36,8 @@ RUN curl -s -q https://raw.githubusercontent.com/minio/minio/${MINIO_VERSION}/CR
 RUN minisign -Vqm /go/bin/minio -x /go/bin/minio.minisig -P RWTx5Zr1tiHQLwG9keckT0c45M3AGeHD6IvimQHpyRywVWGbP1aVSGav && \
     minisign -Vqm /go/bin/mc -x /go/bin/mc.minisig -P RWTx5Zr1tiHQLwG9keckT0c45M3AGeHD6IvimQHpyRywVWGbP1aVSGav
 
-RUN chmod +x /download-static-curl.sh && /download-static-curl.sh
+RUN chmod +x /build/download-static-curl && \
+    /build/download-static-curl
 
 FROM registry.access.redhat.com/ubi9/ubi-micro:latest
 
