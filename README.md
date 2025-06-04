@@ -141,10 +141,10 @@ To access the Minio web console, configure the necessary proxy settings:
 
 ```bash
 # If SSL is enabled
-dokku proxy:ports-add minio https:<desired_port>:9001
+dokku ports:add minio https:<desired_port>:9001
 
 # If SSL is disabled
-dokku proxy:ports-add minio http:<desired_port>:9001
+dokku ports:add minio http:<desired_port>:9001
 ```
 
 Replace `<desired_port>` with your preferred port number (default is `9001`).
