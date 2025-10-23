@@ -114,7 +114,7 @@ Secure your app with an SSL certificate from Let's Encrypt:
 1. Add the HTTPS port:
 
     ```bash
-    dokku ports:add grafana https:443:9000
+    dokku ports:add minio https:443:9000
     ```
 
 2. Install the Let's Encrypt plugin:
