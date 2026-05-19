@@ -1,6 +1,10 @@
 ![](.github/images/repo_header.png)
 
-> **⚠️ Archival notice:** This repository is being archived because MinIO is no longer open-source. It is kept available for historical/reference purposes.
+> **⚠️ Archival notice:** This repository is being archived because MinIO is no longer open-source.
+>
+> MinIO was originally released under the Apache License 2.0, making it a popular choice for self-hosted, S3-compatible object storage. In 2021 the project switched to the GNU AGPLv3, which introduced significant restrictions for many users. More recently MinIO moved to a proprietary license, meaning it no longer qualifies as open-source software under the [Open Source Definition](https://opensource.org/osd).
+>
+> Because this repository exists to help people self-host MinIO using an open-source workflow, maintaining it under a proprietary upstream no longer aligns with its original purpose. The guide is preserved here as a historical reference for anyone who may still find it useful.
 
 [![Minio](https://img.shields.io/badge/Minio-15/10/2025-blue.svg)](https://github.com/minio/minio/releases/tag/RELEASE.2025-10-15T17-29-55Z)
 [![Dokku](https://img.shields.io/badge/Dokku-Repo-blue.svg)](https://github.com/dokku/dokku)
@@ -10,10 +14,6 @@
 ## Overview
 
 This guide explains how to deploy [Minio](https://www.minio.io/), an object storage server compatible with Amazon S3, on a [Dokku](https://dokku.com/) host. Dokku is a lightweight PaaS that simplifies deploying and managing applications using Docker.
-
-## A little story
-
-MinIO began as an open-source project and became a popular choice for teams that wanted S3-compatible object storage they could run themselves. As MinIO moved away from an open-source licensing model, many community guides like this one became historical snapshots of a different moment in the ecosystem. This section is a small reminder of that shift and why older deployment docs are now mostly reference material.
 
 ## Prerequisites
 
