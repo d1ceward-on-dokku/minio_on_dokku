@@ -13,7 +13,7 @@ This guide explains how to deploy [Minio](https://www.minio.io/), an object stor
 
 ## A little story
 
-This repository started as a simple, practical recipe for running MinIO on Dokku with as little friction as possible. Over time it became a handy reference for self-hosters who wanted quick setup commands in one place. Now that MinIO has moved away from an open-source license, this project is being archived—but the guide remains here as a snapshot of that era and a useful historical reference.
+MinIO began as an open-source project and became a popular choice for teams that wanted S3-compatible object storage they could run themselves. As MinIO moved away from an open-source licensing model, many community guides like this one became historical snapshots of a different moment in the ecosystem. This section is a small reminder of that shift and why older deployment docs are now mostly reference material.
 
 ## Prerequisites
 
