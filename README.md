@@ -11,6 +11,10 @@
 
 This guide explains how to deploy [Minio](https://www.minio.io/), an object storage server compatible with Amazon S3, on a [Dokku](https://dokku.com/) host. Dokku is a lightweight PaaS that simplifies deploying and managing applications using Docker.
 
+## A little story
+
+This repository started as a simple, practical recipe for running MinIO on Dokku with as little friction as possible. Over time it became a handy reference for self-hosters who wanted quick setup commands in one place. Now that MinIO has moved away from an open-source license, this project is being archived—but the guide remains here as a snapshot of that era and a useful historical reference.
+
 ## Prerequisites
 
 Before proceeding, ensure you have the following:
