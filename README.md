@@ -1,5 +1,7 @@
 ![](.github/images/repo_header.png)
 
+> **⚠️ Archival notice:** This repository is being archived because MinIO is no longer open-source. It is kept available for historical/reference purposes.
+
 [![Minio](https://img.shields.io/badge/Minio-15/10/2025-blue.svg)](https://github.com/minio/minio/releases/tag/RELEASE.2025-10-15T17-29-55Z)
 [![Dokku](https://img.shields.io/badge/Dokku-Repo-blue.svg)](https://github.com/dokku/dokku)
 
